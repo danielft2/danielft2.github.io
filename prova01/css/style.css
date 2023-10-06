@@ -1,0 +1,306 @@
+* {
+   padding: 0;
+   margin: 0;
+   font-family: 'Inter', sans-serif;
+   box-sizing: border-box;
+}
+
+body {
+   background-color: #111827;
+}
+
+button {
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+.nav_button {
+   padding: 0.8rem 1rem;
+   border-radius: 4px;
+   border: solid 1px #8257e5;
+   background-color: #8257e5;
+   color: white;
+   font-weight: 600;
+   font-size: 0.8rem;
+   cursor: pointer;
+   box-shadow: 3px 7px 5px #8257e558;
+   transition: background-color 0.3s, transform 400ms, box-shadow 400ms;
+} 
+
+.nav_button:hover {
+   background-color: #5732af;
+}
+
+.nav_button:active {
+   box-shadow: 2px 3px 1px #8257e558;
+   transform: translate(4px, 6px);
+}
+
+#header {
+   background-color: #030712;
+   border-bottom: solid 1px #303030;
+}
+
+#header_content {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+#header_content {
+   max-width: 1500px;
+   margin: 0 auto;
+   padding: 1rem 2rem;
+} 
+
+#header_content nav ul {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   list-style: none;
+}
+
+#header_content span {
+   color: white;
+   font-weight: 600;
+}
+
+#header li button {
+   color: white;
+   text-decoration: none;
+}
+
+#button_dropdown {
+   width: 200px;
+   background-color: #030712;
+   border: solid 1px #8257e5;
+}
+
+#button_dropdown:hover {
+   background-color: #8257e5;
+   transition: all 0.2s ease-in;
+}
+
+/* Dropdown */
+.dropbtn {
+  background-color: #121214;
+  color: white;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #030712;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content button {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.85rem;
+}
+
+.dropdown-content button:active {background-color: #111827;}
+.dropdown:active .dropdown-content {display: block;}
+
+/* Sidebar Left */
+#sidebar_left {
+   background-color: #030712;
+   min-width: 300px;
+   width: 20vh;
+   height: 1200px;
+   padding: 1rem 2rem;
+   border-right: solid 1px #303030;
+   border-bottom: solid 1px #303030;
+}
+
+#sidebar_left ul {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+}
+
+#sidebar_left ul li {
+   list-style: none;
+}
+
+#sidebar_left ul button {
+   text-decoration: none;
+   color: #d4d4d8;
+   font-size: 0.9rem;
+}
+
+#sidebar_left ul button:hover {
+   filter: brightness(0.85);
+}
+
+#sidebar_rigth {
+   background-color: #030712;
+   width: 300px;
+   min-height: 100vh;
+   padding: 1rem 2rem;
+   border-left: solid 1px #303030;
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+
+#sidebar_rigth h1 {
+   color: #e4e4e7;
+   font-size: 1.1rem;
+}
+
+#sidebar_rigth p {
+   color: #a1a1aa;
+   font-size: 0.9rem;
+   line-height: calc(0.9rem * 1.5);
+}
+
+.container_main {
+   display: flex;
+   justify-content: space-between;
+}
+
+.content_main article {
+   max-width: 1000px;
+   margin: 0 auto;
+}
+
+.article_name {
+   color: white;
+   font-size: 2rem;
+   margin-bottom: 3rem;
+}
+
+.content_main article section {
+   margin-bottom: 2rem;
+}
+
+.content_main {
+   width: 80vw;
+   height: 1200px;
+   padding: 3rem;
+}
+
+.section_identifiy {
+   color: #8257e5;
+}
+
+.section_reading {
+   max-width: 1000px;
+   margin: 0 auto;
+   border: solid 1px #6b7280;
+   padding: 2rem;
+   border-radius: 0.5rem;
+   background-color: #374151;
+
+   margin-bottom: 2rem;
+}
+
+.title_section {
+   color: white;
+   margin-bottom: 0.5rem;
+   font-size: 1.5rem;
+}
+
+.description_section {
+   color: #9ca3af;
+   font-size: 0.9rem;
+   line-height: calc(.95rem * 1.5);
+   margin-bottom: 1rem;
+}
+
+/* Loader */
+
+.loader_container {
+   text-align: center;
+}
+
+.loader {
+   /* Define a largura de 28px */
+   width: 28px; 
+
+   /* Define a altura igual a lagura, 28px */
+   height: 28px; 
+
+   /* Define uma borda de 3px de altura endo do tipo solid e com a cor branca */
+   border: 3px solid #FFF;
+
+   /* Define a cor da borda de baixo com a cor roxa */
+   border-bottom-color: #8257e5;
+   
+   /* Arrendonda o loader em 50% */
+   border-radius: 50%;
+
+   /* Transforma o tipo de display em inline-block para que as margens/preenchimentos 
+   superior e inferior sejam respeitados */
+   display: inline-block;
+
+   /* Faz com que o preenchimento e a borda sejam incluídos na largura e na altura*/
+   box-sizing: border-box;
+
+   /* Usa a animação criada no keyframe e define qye ela vai durar 1s e tera o tipo linerar. 
+   Ademais, ela ficara em loop devido a propiedade infinite*/
+   animation: rotation 1s linear infinite;
+}
+
+/* Cria uma animação chamada rotation que no istante 0% terar uma rotação de 0 graus e no istante 100% tera 360 graus*/
+
+@keyframes rotation {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+} 
+
+
+/* Responsivo */
+@media screen and (max-width: 600px) {
+   #header_content {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+   }
+
+   #button_dropdown {
+      width: 100px;
+   }
+
+   .container_main {
+     flex-direction: column;
+   }
+
+   #sidebar_left {
+      min-width: 100%;
+      width: 100%;
+      height: auto;
+      padding: 2rem 2rem;
+   }
+
+   .content_main {
+      width: 100%;
+   }
+
+   .loader_container {
+      padding-bottom: 2rem;
+   }
+}
